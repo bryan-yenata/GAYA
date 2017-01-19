@@ -1,0 +1,118 @@
+/* Send Confirmation Email with Google Forms */
+ 
+function Initialize() {
+ 
+  var triggers = ScriptApp.getProjectTriggers();
+ 
+  for (var i in triggers) {
+    ScriptApp.deleteTrigger(triggers[i]);
+  }
+ 
+  ScriptApp.newTrigger("SendConfirmationMail")
+    .forSpreadsheet(SpreadsheetApp.getActiveSpreadsheet())
+    .onFormSubmit()
+    .create();
+ 
+}
+ 
+function SendConfirmationMail(e) {
+ 
+  try {
+ 
+    var ss, cc, sendername, subject, columns;
+    var message, value, textbody, receiver;
+    var total;
+ 
+    // This is your email address and you will be in the CC
+    cc = "gelarbudayamarketing@gmail.com";
+ 
+    // This will show up as the sender's name
+    sendername = "GAYA Ticketing";
+ 
+    // Optional but change the following variable
+    // to have a custom subject for Google Docs emails
+    subject = "GAYA Online Purchase Order Confirmation";
+ 
+    // This is the body of the auto-reply
+    message = "<center><img width='100px' src='http://luccan.github.io/GAYA2016/img/gaya_logo_email.png'></center>";
+    message += "<h1><center>Ticket Order Confirmation</center></h1><hr>";
+    message += "<p style='font-size:125%'>";
+    message += "Dear " + e.namedValues["Full Name"] + ",<br><br>";
+    message += "Thank you for ordering through our online system. This is a confirmation and summary of your ticket order.<br><br>";
+    message += "Ticket Details are as follows:<br>";
+    message += "</p>";
+    
+    message += "<table style='font-size:125%'>";
+    total = 0;
+    if (e.namedValues["Matinee Show (Circle2)"].toString() !== ""){
+      message += "<tr><td><b>Matinee Show Circle2</b></td> <td>$19x" + e.namedValues["Matinee Show (Circle2)"] + "</td></tr>";
+      total += 19*e.namedValues["Matinee Show (Circle2)"];
+    }
+    if (e.namedValues["Matinee Show (Circle1)"].toString() !== ""){
+      message += "<tr><td><b>Matinee Show Circle1</b></td> <td>$24x" + e.namedValues["Matinee Show (Circle1)"] + "</td></tr>";
+      total += 24*e.namedValues["Matinee Show (Circle1)"];
+    }
+    if (e.namedValues["Matinee Show (Premier)"].toString() !== ""){
+      message += "<tr><td><b>Matinee Show Premier</b></td> <td>$28x" + e.namedValues["Matinee Show (Premier)"] + "</td></tr>";
+      total += 28*e.namedValues["Matinee Show (Premier)"];
+    }
+    if (e.namedValues["Night Show (Circle2)"].toString() !== ""){
+      message += "<tr><td><b>Night Show Circle2</b></td> <td>$19x" + e.namedValues["Night Show (Circle2)"] + "</td></tr>";
+      total += 19*e.namedValues["Night Show (Circle2)"];
+    }
+    if (e.namedValues["Night Show (Circle1)"].toString() !== ""){
+      message += "<tr><td><b>Night Show Circle1</b></td> <td>$24x" + e.namedValues["Night Show (Circle1)"] + "</td></tr>";
+      total += 24*e.namedValues["Night Show (Circle1)"];
+    }
+    if (e.namedValues["Night Show (Premier)"].toString() !== ""){
+      message += "<tr><td><b>Night Show Premier</b></td> <td>$28x" + e.namedValues["Night Show (Premier)"] + "</td></tr>";
+      total += 28*e.namedValues["Night Show (Premier)"];
+    }
+    message += "<tr><td colspan='2'>________________________________+</td></tr>";    
+    message += "<tr><td><b>Total:</b></td> <td><b>$" + total + "</b>";
+    message += "</table><br>";
+    
+    message += "<p style='font-size:125%'>";
+    message += "<b>Transaction Reference Number: </b>" + e.namedValues["Transaction Number"] + "<br><br>";
+    
+    message += "You will be contacted once the transfer has been validated. If you have any other enquiries, feel free to contact us at gelarbudayaticketing@gmail.com.<br><br>";
+    message += "Thank you.<br><br>";
+    message += "Best Regards,<br>";
+    message += "</p>";
+    message += "<img width='400px' src='http://luccan.github.io/GAYA2016/img/gaya_logo_signature.png'><br>";
+ 
+    // This is the submitter's email address
+    // Make sure you have a field called Email Address in the Google Form
+    receiver = e.namedValues["Email"].toString();
+ 
+//    ss = SpreadsheetApp.getActiveSheet();
+//    columns = ss.getRange(1, 1, 1, ss.getLastColumn()).getValues()[0];
+    
+    // Only include form values that are not blank
+//    for (var keys in columns) {
+//      var key = columns[keys];
+//      var val = e.namedValues[key] ? e.namedValues[key].toString() : "";
+//      if (val !== "") {
+//        message += key + ' : ' + val + "<br />";
+//      }
+//    }
+ 
+    textbody = message.replace("<br>", "\n");
+    
+    if (total > 0){
+      GmailApp.sendEmail(receiver, subject, textbody, {
+        cc: cc,
+        name: sendername,
+        htmlBody: message
+      });
+    }
+ 
+  } catch (e) {
+    Logger.log(e.toString());
+    GmailApp.sendEmail("luccan.ryanata@gmail.com", "ERROR_IN_TICKETING", e.toString(), {
+        name: "GAYA Ticketing Error",
+        htmlBody: e.toString()
+      });
+  }
+ 
+}

@@ -1,0 +1,119 @@
+body {
+background : url(../img/background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-brand {
+	padding: 3px;
+}
+
+body, h1, h2, h3, h4, h5, h6{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-header{
+	background-color: transparent;
+}
+
+.topnav {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: transparent;
+  border-color: transparent;
+  text-transform: uppercase;
+}
+
+.topnav-background {
+  background-color: transparent;
+  
+  background: ;
+
+  position: fixed;
+  height: 158px;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+/*iphone screens*/
+@media(max-width:480px) {
+	.topnav-background {
+		height: 50px;
+		background-size : 100% 50px;
+	}
+}
+
+.nav>li{
+	text-align: right;
+}
+
+.navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:focus {
+	color: white;
+	text-shadow: 1px 1px 4px black;
+}
+.navbar-default .navbar-nav li a:hover,  
+.navbar-default .navbar-nav li a.focus { color: #f3db6b; }
+
+/* Selected Navbar Item */
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	color: red;
+	background-color: #ffffff;
+}
+
+.dropdown-menu {
+	background-color: #ffffff;
+}
+
+/* dropdown item color*/
+.navbar-nav>li>.dropdown-menu>li {
+	text-align: right;
+}
+.navbar-nav>li>.dropdown-menu>li>a {
+	color: black;
+}
+
+footer {
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px 0 20px 0;
+  text-shadow: 1px 1px 4px black;
+  color: white;
+
+  position: fixed;
+  height: 50px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1030;
+}
+
+.img-footer {
+	height: 40px;
+    top: -10px;
+    position: absolute;
+}
+
+.footer-background {
+  background-color: transparent;
+  
+  background: ;
+
+  position: fixed;
+  height: 50px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}

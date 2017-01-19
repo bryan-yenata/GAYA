@@ -1,0 +1,265 @@
+/*!
+ * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.marquee-hidden{
+	visibility:hidden;
+}
+
+.fadescreen-container{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.fadescreen{
+  height: 100%;
+  width: 100%;
+  background: transparent; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, black 0%, rgba(0,0,0,0.8) 10%, transparent 30%, transparent 70%, rgba(0,0,0,0.8) 90%, black 100%); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right, black 0%, rgba(0,0,0,0.8) 10%, transparent 30%, transparent 70%, rgba(0,0,0,0.8) 90%, black 100%); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right, black 0%, rgba(0,0,0,0.8) 10%, transparent 30%, transparent 70%, rgba(0,0,0,0.8) 90%, black 100%); /*Fx 3.6-15*/
+  background: linear-gradient(to right, black 0%, rgba(0,0,0,0.8) 10%, transparent 30%, transparent 70%, rgba(0,0,0,0.8) 90%, black 100%); /* Standard syntax */
+}
+
+/* overflows is to allow background to move and to prevent modal from making scrollbar disappear */
+.modal { position: absolute; margin-top: 50px; }
+.modal-open .modal { overflow: hidden; }
+.modal-body { font-size: 20px; /*overflow-y: auto;*/ }
+.modal-open[style] { padding-right: 0px !important; }
+h4.modal-title {
+  font-weight: 700;
+  color: rgba(0,0,0,0.5);
+  font-size: 24px;
+  font-family: 'Bodoni MT', serif;
+  font-weight: 700;
+  font-style: italic;
+ }
+.modal-backdrop { display: none; } /* remove backdrop */
+
+/* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+section{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.onepage-pagination{
+	top: 40%;
+}
+
+.onepage-pagination li a:before{
+	background-color: gray;
+}
+
+.onepage-pagination li a.active:before {
+	border-color: gray;
+}
+
+.container a {
+  color: red;
+}
+
+.carousel-control{
+	opacity: 0;
+	z-index: 1000;
+}
+.carousel-control.left, .carousel-control.right{
+	background-image: none;
+}
+.left.carousel-control{
+	left: -10%;
+	opacity: 1;
+}
+.right.carousel-control{
+	right: -10%;
+	opacity: 1;
+}
+
+.carousel-caption{
+	position: relative;
+	left: auto;
+	right: auto;
+}
+
+
+.carousel-border{
+	border-style: ridge;
+    border-color: silver gray dimgray gray;
+    border-width: 15px;
+}
+@media (max-width: 991px){ /*992-1*/
+	.carousel-border{
+		top: 50px;
+	}
+}
+
+img.hover-color {
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+.cover-image {
+  background-color: black;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* Disable grayscale on hover */
+div:hover>img.hover-color, div:hover>a>img.hover-color{
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+a .img-caption {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	text-shadow: 1px 1px 4px black;
+ 	 font-size: 18px;
+	font-style: ;
+}
+.container a {
+	color: white;
+}
+.container a.cast-item:hover, .container a.cast-item:focus{
+	color: #f3db6b;
+	text-decoration: none;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+}
+
+.lead2 {
+	font-size: 18px;
+  font-weight: 300;
+  color: white;
+}
+.lead3 {
+	font-size: 14px;
+  font-weight: 300;
+  color: white;
+}
+.leadnav {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.button>.glyphicon {
+	text-shadow: none;
+}
+
+.intro {
+  background-color: rgba(0,0,0,0.97);
+  padding: 0px;
+}
+
+.content-section-a {
+	padding: 130px 0 50px 0;
+	/* color: white;
+	background-color:rgba(0,0,0,0.7); */
+}
+
+.content-section-a.community {
+  padding-bottom: 10px;
+}
+
+.content-section-b {
+  padding: 130px 0 50px 0;
+ background-color: rgba(255,255,255,0.5); 
+}
+
+.content-section-a .well {
+	color: black;
+	padding: 15px 20px;
+}
+
+.well input {
+	height: 28px;
+	padding: 3px 12px;
+}
+.well .lead {
+	margin-bottom: 5px;
+}
+.well .lead.smaller {
+	font-size: 16px;
+}
+
+@media (max-width: 991px){ /*992-1*/
+	#buy-tickets-ticket-qty.disabled{ /* when screen is small, this section is hidden*/
+		display: none;
+	}
+	.hidden-sm{
+		display: none;
+	}
+}
+
+.content-section-c {
+  padding: 80px 0 50px 0;
+ /*  background-color:rgba(0,0,0,0.7);
+  color: white; */
+}
+
+.content-section-d {
+  padding: 180px 0 50px 0;
+ /*  background-color: rgba(0,0,0,0.97);
+  color: white; */
+}
+
+.section-heading.nomargin{
+  margin: 0px;
+  /*position: fixed;
+  z-index: 1010;*/
+}
+
+/* Sponsors page */
+#sponsor-details{
+	/*padding: 15px;
+	background-color: rgba(255,255,255,0.9);
+	border-color: black;*/
+	overflow-y: auto;
+	text-align:center;
+	font-size: 32px;
+	font-style: italic;
+	font-weight: 700;
+	font-family: 'Bodoni MT', serif;
+}
+#sponsor-details2{
+	/*padding: 15px;*/
+	overflow-y: auto;
+	text-align:center;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Bodoni MT', serif;
+}
+
+.panel.facebook-panel {
+	padding: 1px;
+	width: 414px;
+	border-color: grey;
+}
+
+/*iphone screens*/
+@media(max-width:480px) {
+	.panel.facebook-panel {
+		width: 100%;
+		overflow-x: auto;
+	}
+}
+
+#a-contact-us, #a-contact-us:focus {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  text-decoration: none;
+}
+#a-contact-us:hover, 
+#a-contact-us.focus { color: red; text-decoration: none; }
