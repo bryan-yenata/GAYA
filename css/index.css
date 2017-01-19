@@ -83,16 +83,18 @@ section{
 }
 
 
+/*
 .carousel-border{
 	border-style: ridge;
     border-color: silver gray dimgray gray;
     border-width: 15px;
 }
-@media (max-width: 991px){ /*992-1*/
+@media (max-width: 991px){ 
 	.carousel-border{
 		top: 50px;
 	}
 }
+*/
 
 img.hover-color {
   filter: gray; /* IE6-9 */
