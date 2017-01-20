@@ -26,7 +26,8 @@
 /* overflows is to allow background to move and to prevent modal from making scrollbar disappear */
 .modal { position: absolute; margin-top: 50px; }
 .modal-open .modal { overflow: hidden; }
-.modal-body { font-size: 20px; /*overflow-y: auto;*/ }
+.modal-body { font-size: 20px;
+    padding: 0; /*overflow-y: auto;*/ }
 .modal-open[style] { padding-right: 0px !important; }
 h4.modal-title {
   font-weight: 700;
@@ -265,3 +266,19 @@ a .img-caption {
 }
 #a-contact-us:hover, 
 #a-contact-us.focus { color: red; text-decoration: none; }
+
+.desc {
+    padding-bottom: 18px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 18px;
+}
+
+.nopadding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.top-buffer {
+    margin-top: 27px;
+}
