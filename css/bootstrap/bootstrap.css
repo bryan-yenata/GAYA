@@ -6802,6 +6802,8 @@ button.close {
 .col-sm-12-a {
   position: relative;
     align-content: center;
+    align-self: center;
+    align-items: center;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
