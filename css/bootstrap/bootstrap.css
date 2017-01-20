@@ -6798,3 +6798,12 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.col-sm-12-a {
+  position: relative;
+    align-content: center;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+}
