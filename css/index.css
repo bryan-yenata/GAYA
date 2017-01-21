@@ -268,8 +268,7 @@ a .img-caption {
 #a-contact-us.focus { color: red; text-decoration: none; }
 
 .desc {
-    padding-bottom: 18px;
-    padding-left: 27px;
+    padding-left: 0px;
     padding-right: 27px;
     padding-top: 18px;
 }
