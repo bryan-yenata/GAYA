@@ -643,6 +643,29 @@
 								<div class="row">
 									<div class="col-xs-6">
 										<div class="well">
+<<<<<<< HEAD
+                      <div class="row"><div class="col-xs-12"><p class="lead" style="font-weight:bolder;text-align:center;margin-bottom: 0px;">
+                        Drama Centre Theatre, National Library Building<br>
+                        Sunday, 12 February 2017
+                      </p></div></div>
+                      <div class="row"><div class="col-xs-12"><p class="lead" style="font-size:120%;font-style:italic;text-align:center;">Ticket Quantity</p></div></div>
+                      <div class="row"><div class="col-xs-12"><p class="lead" style="font-size:120%;font-weight:bold;">Matinee (3PM)</p></div></div>
+                      
+                      
+                      <div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Premiere ($25):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-3" type="number" class="form-control" min="0"  max="5" onchange="handleChangeMP(this);"></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 1 ($22):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-2" type="number" class="form-control" min="0" onchange="handleChangeMC1(this);" ></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 2 ($18):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-1" type="number" class="form-control" min="0" onchange="handleChangeMC2(this);"></input></p></div></div>
+                      <div class="row"><div class="col-xs-12"><p class="lead" style="font-size:120%;font-weight:bold;">Night (7.30PM)</p></div></div>
+                      <div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Premiere ($25):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-3" type="number" class="form-control" min="0" onchange="handleChangeNP(this);"></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 1 ($22):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-2" type="number" class="form-control" min="0" onchange="handleChangeNC1(this);"></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 2 ($18):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-1" type="number" class="form-control" min="0" onchange="handleChangeNC2(this);"></input></p></div></div>
+                      <div class=row><div class="col-md-7 col-md-offset-5 col-sm-6 col-sm-offset-6 col-xs-6 col-xs-offset-6">
+                        <button id="buy-tickets-submit-qty" class="btn button-default">Proceed Now</button>
+                      </div></div>
+                    </div>
+=======
 											<div class="row"><div class="col-xs-12"><p class="lead" style="font-weight:bolder;text-align:center;margin-bottom: 0px;">
 												Drama Centre Theatre, National Library Building<br>
 												Sunday, 12 February 2017
@@ -667,6 +690,7 @@
 												<button id="buy-tickets-submit-qty" class="btn button-default">Proceed Now</button>
 											</div></div>
 										</div>
+>>>>>>> origin/master
 									</div>
 								
 							
@@ -771,6 +795,31 @@
 
 	<!--animation scripts-->
 	<script>
+            function handleChangeMP(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 5) input.value = 5;
+        }  
+        function handleChangeMC1(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 7) input.value = 7;
+        }  
+        function handleChangeMC2(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 8) input.value = 8;
+        }  
+        function handleChangeNP(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 9) input.value = 9;
+        }  
+        function handleChangeNC1(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 2) input.value = 2;
+        }  
+        function handleChangeNC2(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 5) input.value = 5;
+        }
+
 		//set actions on anchors
 		$("#a-home").click(function(){$(".main").moveTo(1); return false;});
 		$("#a-synopsis").click(function(){$(".main").moveTo(2); return false;});
