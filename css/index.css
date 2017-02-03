@@ -287,3 +287,18 @@ a .img-caption {
   font-weight: 300;
   color: white;
 }
+
+.lead-2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+}
+
+.lead-3 {
+  font-style: bold;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: black;
+}
