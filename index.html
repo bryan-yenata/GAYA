@@ -828,69 +828,6 @@
 			console.log(page_height-marquee_offset_top);*/
 		}
 		
-		//mouseover sponsor event - changed to click
-		var default_content = "Click on the images to find out more about our sponsors!";
-		var default_details = "";
-		var default_icon = "./img/sponsors/gaya_logo.png";
-		$("div.sponsor").click(
-			function() { //mouseover
-				var src = $(this).find('img').first().attr("src");
-				//console.log(src);
-				$("#sponsor-icon").attr("src", src);
-				var content = default_content;
-				var details = default_details;
-				if ($(this).attr("id")=="sponsor1-icon"){
-					content = "Gelar Budaya";
-				} else if ($(this).attr("id")=="sponsor2-icon"){
-					content = "SMU Komunitas Indonesia";
-					details = "Striving to bring a better indonesian community to SMU";
-				} else if ($(this).attr("id")=="sponsor3-icon"){
-					content = "Pt. Sinar Makmur Printing";
-					details = "With more than a quarter-century of experience in the printing field, Sinar Makmur Printing offers fast and reliable printing solutions to our clients’ requests locally and abroad. <br/>Right from the beginning of design to the finished products, all processes are run in house and well-managed by our dedicated team to deliver high quality products to our clients. <br/>Therefore, you can be assured that we are here to stay and help with all your printing matters!";
-				} else if ($(this).attr("id")=="sponsor4-icon"){
-					content = "Sekolah SG";
-					details = "SekolahSG is a platform for young Indonesians to learn what it’s like to live and study in Singapore. SekolahSG is here to show you a new way of living. Take the first step with us. New way, new life."
-				} else if ($(this).attr("id")=="sponsor5-icon"){
-					content = "HeyDiaspora Online Magazine";
-					details = "HeyDiaspora Online Magazine is a bilingual magazine, updated virtually, filled with our lives, our hopes, our opinions and our thoughts. <br/>We are the official media of Indonesian Students’ Association in Singapore (PPIS). <br/>This is the place where any Indonesian can show their ability to become a writer or a photographer!";
-				} else if ($(this).attr("id")=="sponsor6-icon"){
-					content = "Garuda Indonesia";
-					details = 'Less than five years old, Garuda Indonesia proudly serves its passengers with the award-winning "Garuda Indonesia Experience" service, which highlights Indonesia’s warm hospitality and rich diverse culture. <br/><br/>The airline continuously strives, through its ongoing transformation program, to provide better and more convenient services with one of the youngest fleets in the sky. The progress of Garuda Indonesia’s transformation program can be seen from achieving a Skytrax’s 5-star airline rating, ranked as the 7th best airline in the world in the 2014, as well as winning the prestigious “The World’s Best Cabin Crew” award in 2014 and “The World’s Best Economy Class” award in 2013, also from Skytrax. Garuda Indonesia is a member of SkyTeam, the global airline alliance with 20 members, providing access to an extensive global network with over 16.320 daily flights to 1,052 destinations in 177 countries. <br/><br/>Garuda Indonesia is currently a frequency leader for Singapore – Jakarta by serving the route with 10 flights daily. In addition, The 5 – Star Airline also flies twice daily flights to Bali, once daily flight to Surabaya and twice weekly one-way non-stop direct flight to Amsterdam. <br/><br/>As part of the airline\'s efforts to further strengthen its international network, especially in Europe, Garuda Indonesia will be flying one way non-stop direct flight from Singapore to London Heathrow starting from March 31, onwards. The Indonesian flag carrier will increase its service frequency to five times per week, departing every other day except on Mondays and Fridays.';
-				} else if ($(this).attr("id")=="sponsor7-icon"){
-					content = "JURA Indonesia";
-				} else if ($(this).attr("id")=="sponsor8-icon"){
-					content = "Embassy of the Republic of Indonesia Singapore";
-				} else if ($(this).attr("id")=="sponsor9-icon"){
-					content = "Ministry of Education and Culture Republic of Indonesia";
-				} else if ($(this).attr("id")=="sponsor10-icon"){
-					content = "Kinerja Bisa";
-					details = 'Kinerjabisa Holding Pte Ltd is a B2B platform for business owners especially from Indonesia who aspire to expand their business overseas through Singapore by using reliable technology and ecommerce market place solution. <br/>The meaning of Kinerja is “Performance" and the meaning of Bisa is “Able / Can Do“; we combine the two words together to achieve mutual business collaboration with strong support and positive attitude. <br/>Our business services are combination between online solution and offline business matching solution for B2B.';
-				} else if ($(this).attr("id")=="sponsor11-icon"){
-					content = "One Academy";
-					details = "One Academy is a professional makeup & hairstyling institution in Singapore providing professional courses for makeup artists. It is established by Ivy Chen, a Taiwanese makeup and hairstyling mentor with over 20 years of makeup and hairstyling experience. One Academy has successfully trained countless students, equipping them with skill sets and strong fundamentals to sustain themselves in the modern world of makeup.  Ivy continues to upgrade her skills, innovate, keep abreast with trends and excel in her trade, providing professional services in presenting splendid, elegant and fashionable brides. Many of her students have given feedback that her makeup course is very detailed and drilled deep into specific modules. She also provides free revision lessons even after completion of her makeup lessons. Ivy also has her own personal website, www.ivychen.com.sg or https://www.facebook.com/oneacademysingapore featuring her full portfolio. With two awards (Asia Excellence Award 2013, Promising SME 500 Award 2013) already accredited to the school, One Academy is poised to be one of Singapore’s best makeup institutions.";
-				} else if ($(this).attr("id")=="sponsor12-icon"){
-					content = "Rumah Budaya Indonesia Singapura";
-				} else if ($(this).attr("id")=="sponsor13-icon"){
-					content = "Wings Corporation";
-					details = "What is today a major corporation that exports its products around the world began life over 60 years ago in East Java. Over the years, Wings has grown to become one of Indonesia's well-known brands. <br/>The company's first products were soap and detergent, which proved a hit with customers. <br/>Soon other cleaning products were introduced and distribution channels were established across Indonesia. The next few decades saw Wings steadily expand its product lines and now produces and sell hundreds of SKUs of household, personal care and food products. <br/>Today, Wings is recognized as a leading local manufacturer and distributor of household and personal care products. Blending local knowledge and advanced manufacturing technologies, Wings is still dedicated to company's vision of providing quality products at affordable prices.";
-				}
-				$("#sponsor-details").html(content);
-				$("#sponsor-details2").html(details);
-				readjust_details2_height();
-			}/*,
-			function() { //mouseout
-				console.log('mouse_out');
-				$("#sponsor-icon").attr("src", default_icon);
-				$("#sponsor-details").html(default_content).promise().done(function(){
-					$("#sponsor-details-marquee").html(default_details).promise().done(function(){
-						readjust_marquee_height();
-					});
-				});
-			}*/
-		);
-		$("#sponsor-details").html(default_content);
-		$("#sponsor-details2").html(default_details);
-		readjust_details2_height();
 		
 		//fix page
 		$(document).unbind('mousewheel');
