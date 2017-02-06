@@ -618,7 +618,10 @@
                       </div></div>
                     </div>
 										</div>
-								
+
+                    <div class="col-xs-6" id="seat-image">
+                        <img src="img/seating.png" class="img-responsive">
+                    </div>
 							
 							<div class="col-md-6 col-sm-12"><form id="buy-tickets-order-details" style="display:none;">
 								<div class="row"><div class="col-xs-12 lead2">
@@ -853,7 +856,7 @@
 				$('#buy-tickets-submit-order').prop("disabled", false);
 				$('#buy-tickets-ticket-qty').addClass("disabled"); /*hide this section when media is small*/
 				$('#buy-tickets-total').html(total.toString());
-				//$('#buy-tickets-submit-qty').fadeOut();
+				$('#seat-image').fadeOut();
 				$('#buy-tickets-order-details').fadeIn();
 			} else {
 				alert('No tickets ordered.');
@@ -872,6 +875,7 @@
 			$('#buy-tickets-submit-order').prop("disabled", true);
 			$('#buy-tickets-ticket-qty').removeClass("disabled"); /*show this section when media is small*/
 			$('#buy-tickets-order-details').fadeOut();
+            $('#seat-image').fadeIn();
 		}
 		$("#buy-tickets-edit-order").click(function(e){
 			enableTicketOrders();
