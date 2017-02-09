@@ -302,3 +302,8 @@ a .img-caption {
   font-weight: 900;
   color: black;
 }
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
