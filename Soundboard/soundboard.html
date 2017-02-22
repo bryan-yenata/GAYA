@@ -1,0 +1,118 @@
+
+<html>
+  <head>
+  <title>MASTERPIECE!</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+    <script>
+
+      function randomExplative(){
+        var clips = ["die_01", "fuck_02", "bitch", "cock_sucker", "fuck_01", "gdit", "oh", "piece_of_shit"];
+        var randClip = Math.floor((Math.random() * clips.length));
+        console.log(clips.length);
+        var audio = new Audio('audio/'+clips[randClip]+'.mp3');
+        audio.play();
+      }
+
+      function playAudio(clip){
+        var audio = new Audio('audio/'+clip+'.mp3');
+        audio.play();
+      }
+    </script>
+    <style>
+      html, body{
+        margin: 0;
+        //padding: 25px;
+        font-family: "Helvetica-Neue", Helvetica, sans-serif;
+      }
+      body{
+        background: url(wallpaper.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      button{
+        padding: 25px 15px;
+        margin: 5px;
+        text-transform: capitalize;
+      }
+      header{
+        background: #fff;
+        padding: 5px;
+        margin-bottom: 20px;
+      }
+
+      h1{
+        font-weight: bold;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+          margin-top: 27px;
+        margin-bottom: 18px;
+        color: rebeccapurple;
+      }
+
+      footer{
+        text-align: center;
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 5px 0;
+        margin-top: 20px;
+      }
+
+      a{
+        color: #000;
+        text-decoration: none;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+
+      .wrapper{
+        margin: 0 20px;
+      }
+
+      @media (max-width: 900px){
+
+        button{
+          width: 100%;
+          margin: 0;
+          padding: 15px 0;
+          background: #fff;
+          border: none;
+          font-size: 16px;
+        }
+        button:first-child{
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+        }
+        button:last-child{
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        button:nth-child(2n+1){
+          background: #eee;
+        }
+
+        footer{
+          position: static;
+          font-size: 22px;
+          padding: 8px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>GAYA Soundboard</h1>
+      <button onclick="playAudio('ah');">Ahhh</button>
+      <button onclick="playAudio('aiya');">Aiya</button>
+      <button onclick="playAudio('uh');">Useless Husband</button>
+      <button onclick="playAudio('uhote');">Useless Husband Of The East</button>
+      <button onclick="playAudio('wdym');">WHAT DO YOU MEAN?!</button>
+      <button onclick="playAudio('tteot');">Song: Till The End Of Time</button>
+      <button onclick="playAudio('cs');">Song: Cayarini and Sambarana</button>
+    </div>
+  </body>
+</html>
