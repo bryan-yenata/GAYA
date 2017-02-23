@@ -40,6 +40,11 @@
             audio.play();
       }
         
+      function playAudioOGG(clip){
+        var audio = new Audio('audio/'+clip+'.ogg');
+            audio.play();
+      }
+        
     </script>
     <style>
       html, body{
@@ -222,7 +227,7 @@
         <!-- Michelle -->
         <button onclick="playAudio('your_friend_too');">He's your friend too!</button>
         
-        <button onclick="playAudio('hm');">Hm</button>
+        <button onclick="playAudioOGG('hm');">Hm</button>
         
         
         
