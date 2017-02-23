@@ -1285,7 +1285,9 @@ h5,
 }
 h6,
 .h6 {
-  font-size: 12px;
+  font-size: 27px;
+  color: gold;
+  font-style: oblique;
 }
 p {
   margin: 0 0 10px;
