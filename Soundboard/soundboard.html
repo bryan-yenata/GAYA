@@ -4,6 +4,24 @@
 	data-platform="Win32">
   <head>
   <title>MASTERPIECE!</title>
+      <link rel="stylesheet" type="text/css" href="/plugin/css/style.css">
+      
+      <script type="text/javascript" src="/js/jquery.min.js"></script>
+      <script type="text/javascript" src="/plugin/jquery-jplayer/jquery.jplayer.js"></script>
+      <script type="text/javascript" src="/plugin/ttw-music-player-min.js"></script>
+      <script type="text/javascript" src="playlist.js"></script>
+      
+      <script type="text/javascript">
+          $('body').ttwMusicPlayer(playlist, {
+        tracksToShow:6,
+        autoPlay:false,
+        },
+        jPlayer:{swfPath:'../plugin/jquery-jplayer'});
+
+   
+   };</script>
+      
+      
   <link rel="stylesheet" href="soundboard.css">
   <meta name="viewport" content="width=device-width, user-scalable=no" />
     <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
@@ -22,10 +40,6 @@
             audio.play();
       }
         
-//      function stopAudio(){
-//        var sounds = document.getElementsByTagName('audio');
-//        for(i=0; i<sounds.length; i++) sounds[i].pause();
-//      }
     </script>
     <style>
       html, body{
@@ -208,6 +222,8 @@
         <!-- Michelle -->
         <button onclick="playAudio('your_friend_too');">He's your friend too!</button>
         
+        <button onclick="playAudio('hm');">Hm</button>
+        
         
         
         
@@ -245,6 +261,8 @@
             </audio>
     <br/>
     <br/>
+            
+            <div id="title"></div>
     </div>
   </body>
 </html>
