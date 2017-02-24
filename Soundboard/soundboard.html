@@ -27,13 +27,13 @@
     <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
     <script>
 
-      function randomExplative(){
-        var clips = ["die_01", "fuck_02", "bitch", "cock_sucker", "fuck_01", "gdit", "oh", "piece_of_shit"];
-        var randClip = Math.floor((Math.random() * clips.length));
-        console.log(clips.length);
-        var audio = new Audio('audio/'+clips[randClip]+'.mp3');
-        audio.play();
-      }
+//      function randomExplative(){
+//        var clips = ["die_01", "fuck_02", "bitch", "cock_sucker", "fuck_01", "gdit", "oh", "piece_of_shit"];
+//        var randClip = Math.floor((Math.random() * clips.length));
+//        console.log(clips.length);
+//        var audio = new Audio('audio/'+clips[randClip]+'.mp3');
+//        audio.play();
+//      }
 
       function playAudio(clip){
         var audio = new Audio('audio/'+clip+'.mp3');
@@ -206,6 +206,7 @@
         <button onclick="playAudio('so_useless');">YOU ARE SO USELESS</button>
         <button onclick="playAudio('no_balls');">Never Had The Balls</button>
         <button onclick="playAudio('faith');">I Had Faith In You</button>
+        <button onclick="playAudio('haha_cayarini');">Hahahaha</button>
         
         <!-- King Kanoman -->
         <button onclick="playAudio('useless_husband');">Useless Husband</button>
